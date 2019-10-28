@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9224240236579A50045C31D /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922423F236579A50045C31D /* TaskStore.swift */; };
+		C922424223657A6B0045C31D /* TaskUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922424123657A6B0045C31D /* TaskUtility.swift */; };
 		C9290CD4236485DC002117B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9290CD3236485DC002117B9 /* AppDelegate.swift */; };
 		C9290CD9236485DC002117B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9290CD7236485DC002117B9 /* Main.storyboard */; };
 		C9290CDB236485DD002117B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9290CDA236485DD002117B9 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C922423F236579A50045C31D /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		C922424123657A6B0045C31D /* TaskUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUtility.swift; sourceTree = "<group>"; };
 		C9290CD0236485DC002117B9 /* Taskly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taskly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9290CD3236485DC002117B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9290CD8236485DC002117B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +41,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C922423B236579450045C31D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9290CE72364AC7E002117B9 /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C922423C236579500045C31D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9290CE523648722002117B9 /* TaskController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C922423D236579610045C31D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C922423F236579A50045C31D /* TaskStore.swift */,
+				C922424123657A6B0045C31D /* TaskUtility.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C922423E236579730045C31D /* System */ = {
+			isa = PBXGroup;
+			children = (
+				C9290CD3236485DC002117B9 /* AppDelegate.swift */,
+				C9290CDA236485DD002117B9 /* Assets.xcassets */,
+				C9290CDC236485DD002117B9 /* LaunchScreen.storyboard */,
+				C9290CDF236485DD002117B9 /* Info.plist */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		C9290CC7236485DC002117B9 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +96,11 @@
 		C9290CD2236485DC002117B9 /* Taskly */ = {
 			isa = PBXGroup;
 			children = (
-				C9290CD3236485DC002117B9 /* AppDelegate.swift */,
 				C9290CD7236485DC002117B9 /* Main.storyboard */,
-				C9290CE523648722002117B9 /* TaskController.swift */,
-				C9290CE72364AC7E002117B9 /* Task.swift */,
-				C9290CDA236485DD002117B9 /* Assets.xcassets */,
-				C9290CDC236485DD002117B9 /* LaunchScreen.storyboard */,
-				C9290CDF236485DD002117B9 /* Info.plist */,
+				C922423B236579450045C31D /* Models */,
+				C922423C236579500045C31D /* Controllers */,
+				C922423D236579610045C31D /* Helpers */,
+				C922423E236579730045C31D /* System */,
 			);
 			path = Taskly;
 			sourceTree = "<group>";
@@ -139,7 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9290CE623648722002117B9 /* TaskController.swift in Sources */,
+				C922424223657A6B0045C31D /* TaskUtility.swift in Sources */,
 				C9290CE82364AC7E002117B9 /* Task.swift in Sources */,
+				C9224240236579A50045C31D /* TaskStore.swift in Sources */,
 				C9290CD4236485DC002117B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Taskly/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Taskly/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Taskly/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Taskly/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
